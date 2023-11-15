@@ -5,12 +5,12 @@ import MainContent from './MainContent';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <Header />
       <NavMenu />
       <MainContent />
       <Footer />
-    </>
+    </div>
   );
 }
 
