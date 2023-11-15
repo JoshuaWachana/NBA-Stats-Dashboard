@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.majorSection {
+  border: 1px solid black;
+}
+
+.header {
+  background-color: aqua;
+}
+
+.mainContent {
+  background-color: antiquewhite;
+}
+
+.navMenu {
+  background-color: aquamarine;
+}
+
+.footer {
+  background-color: yellow;
+}
