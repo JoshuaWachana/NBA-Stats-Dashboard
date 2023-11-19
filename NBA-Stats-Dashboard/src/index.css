@@ -42,6 +42,25 @@
 
 .navMenu {
   grid-area: navMenu;
+  padding: 20px 10px;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.navItem {
+  margin: 20px;
+  list-style-type: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navItem__icon {
+  margin-right: 17px;
+}
+
+.navItem__icon-arrow {
+  margin-left: auto;
 }
 
 .footer {
