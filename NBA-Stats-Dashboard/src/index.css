@@ -1,3 +1,9 @@
+:root {
+  --red: #ff0000;
+  --beige: #f5f5dc;
+  --white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +11,7 @@
 }
 
 .App {
-  background-color: beige;
+  background-color: var(--beige);
   min-height: 100vh;
   min-height: 100dvh;
   padding: 20px;
@@ -20,8 +26,8 @@
 }
 
 .majorSection {
-  background-color: white;
-  border: 1px solid red;
+  background-color: var(--white);
+  border: 1px solid var(--red);
   border-radius: 10px;
 }
 
