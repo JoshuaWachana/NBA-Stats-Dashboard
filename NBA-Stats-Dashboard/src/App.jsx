@@ -1,7 +1,7 @@
-import Header from './Header';
-import Footer from './Footer';
-import NavMenu from './NavMenu';
-import MainContent from './MainContent';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NavMenu from './components/NavMenu';
+import MainContent from './components/MainContent';
 
 function App() {
   return (
