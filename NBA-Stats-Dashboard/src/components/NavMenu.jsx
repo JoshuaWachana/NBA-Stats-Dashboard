@@ -11,7 +11,7 @@ function NavMenu() {
           width="24px"
           alt="Icon of Statistics"
         />
-        <span>Player Stats</span>
+        <span className="navItem__text">Player Stats</span>
         <img
           className="navItem__icon-arrow"
           src="../src/assets/arrow-right.png"
@@ -28,7 +28,7 @@ function NavMenu() {
           width="24px"
           alt="Icon of Comparisons"
         />
-        <span>Player Comparisons</span>
+        <span className="navItem__text">Player Comparisons</span>
         <img
           className="navItem__icon-arrow"
           src="../src/assets/arrow-right.png"
@@ -45,7 +45,7 @@ function NavMenu() {
           width="24px"
           alt="Icon of GeoMaps"
         />
-        <span>GeoMaps</span>
+        <span className="navItem__text">GeoMaps</span>
         <img
           className="navItem__icon-arrow"
           src="../src/assets/arrow-right.png"

@@ -55,10 +55,13 @@
   align-items: center;
   text-decoration: none;
   color: var(--white);
-  opacity: 0.9;
 }
-.navItem:hover {
-  opacity: 1;
+.navItem__text {
+  padding: 0 10px;
+}
+.navItem__text:hover {
+  background-color: var(--white);
+  color: var(--blue);
 }
 
 .navItem__icon {
