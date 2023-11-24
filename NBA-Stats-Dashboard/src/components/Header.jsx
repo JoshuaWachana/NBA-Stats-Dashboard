@@ -1,7 +1,12 @@
 function Header() {
   return (
     <div className='majorSection header'>
-      <h1>The Bannner will go here. Which is inside the Header Component.</h1>
+      <img
+          src="../src/assets/banner.jpeg"
+          height="200px"
+          width="100%"
+          alt="Picture of NBA banner"
+        />
     </div>
   );
 }
