@@ -1,0 +1,1 @@
+export const LeagueScoreUrl = 'https://nba-stats-db.herokuapp.com/api/playerdata/topscorers/total/season/2023/?format=json';
