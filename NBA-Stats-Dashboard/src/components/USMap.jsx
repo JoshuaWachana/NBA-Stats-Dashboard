@@ -2,12 +2,12 @@ import { Chart } from 'react-google-charts';
 import usBirthPlaceData from '../data/us-birthplaces.json';
 
 function USMap() {
-  const newData = usBirthPlaceData.map((state) => [
+  const formatted_USBirthPlaceData = usBirthPlaceData.map((state) => [
     state.State,
     state.numOfPlayers,
   ]);
-  console.log(newData);
-  const data = [['State', 'Latitude'], ...newData];
+
+  const data = [['State', 'Players'], ...formatted_USBirthPlaceData];
 
   const options = {
     region: 'US',

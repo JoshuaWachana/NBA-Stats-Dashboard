@@ -5,6 +5,7 @@ function GeoMaps() {
   return (
     <div>
       <h1>Geo-Demographics - Birthplaces</h1>
+      <h1>Where are the NBA Players from?</h1>
 
       <USMap />
       <WorldMap />
@@ -13,7 +14,7 @@ function GeoMaps() {
         of NBA players past and present.{' '}
       </p>
       <p>
-        reference:{' '}
+        Reference:{' '}
         <a href='https://www.basketball-reference.com/friv/birthplaces.fcgi'>
           basketball-reference
         </a>

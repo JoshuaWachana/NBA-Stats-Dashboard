@@ -1,15 +1,12 @@
 import { Chart } from 'react-google-charts';
+import worldBirthPlaceData from '../data/world-birthplaces.json';
 
 function WorldMap() {
-  const data = [
-    ['Country', 'Popularity'],
-    ['Germany', 200],
-    ['United States', 300],
-    ['Brazil', 400],
-    ['Canada', 500],
-    ['France', 600],
-    ['RU', 700],
-  ];
+  const formatted_WorldBirthPlaceData = worldBirthPlaceData.map((country) => [
+    country.Country,
+    country.numOfPlayers,
+  ]);
+  const data = [['Country', 'Players'], ...formatted_WorldBirthPlaceData];
   return (
     <div>
       <h2>World Map - Birthplaces</h2>

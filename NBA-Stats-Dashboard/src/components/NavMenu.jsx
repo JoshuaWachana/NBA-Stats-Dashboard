@@ -11,7 +11,7 @@ function NavMenu() {
           width='24px'
           alt='Icon of Statistics'
         />
-        <span className='navItem__text'>Player Stats</span>
+        <span className='navItem__text'>League Leaders</span>
         <img
           className='navItem__icon-arrow'
           src='../src/assets/arrow-right.png'
