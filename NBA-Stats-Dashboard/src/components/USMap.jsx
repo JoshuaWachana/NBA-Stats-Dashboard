@@ -18,12 +18,12 @@ function USMap() {
   };
   return (
     <div>
-      <div>US Map - Birthplaces</div>{' '}
+      <h2>US Map - Birthplaces</h2>{' '}
       <div>
         <Chart
           chartType='GeoChart'
-          width='100%'
-          height='400px'
+          width='50%'
+          height='200px'
           data={data}
           options={options}
         />

@@ -1,4 +1,5 @@
 import USMap from './USMap';
+import WorldMap from './WorldMap';
 
 function GeoMaps() {
   return (
@@ -6,6 +7,7 @@ function GeoMaps() {
       <h1>Geo-Demographics - Birthplaces</h1>
 
       <USMap />
+      <WorldMap />
       <p>
         This is data on where NBA players were born. This data is comprehensive
         of NBA players past and present.{' '}
