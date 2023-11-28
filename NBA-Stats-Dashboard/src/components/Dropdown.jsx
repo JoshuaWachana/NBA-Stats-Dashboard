@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Dropdown = ( {title, options, onSelect}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(title || 'Select Criteria')
+  const [selectedOption, setSelectedOption] = useState(title || options[0].title || 'Select Criteria')
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -11,7 +11,7 @@ const Dropdown = ( {title, options, onSelect}) => {
 
   const handleSelect = (option) => {
     onSelect(option);
-    setSelectedOption(option)
+    setSelectedOption(option.title)
     setIsOpen(false);
   };
 
@@ -30,7 +30,7 @@ const Dropdown = ( {title, options, onSelect}) => {
         <div className="dropdown__option">
           {options.map((option, index) => (
             <li key={index} onClick={() => handleSelect(option)}>
-              {option}
+              {option.title}
             </li>
           ))}
         </div>
@@ -41,7 +41,7 @@ const Dropdown = ( {title, options, onSelect}) => {
 
 Dropdown.propTypes = {
     title: PropTypes.string,
-    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    options: PropTypes.arrayOf(PropTypes.object).isRequired,
     onSelect: PropTypes.func.isRequired,
   };
 

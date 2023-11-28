@@ -1,22 +1,38 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { LeagueScoreUrl } from "../apiEndpoints";
-import 'chart.js/auto';
+import { TopScorersUrl, TopAssistsUrl, TopReboundsUrl } from "../utils/apiEndpoints";
+import "chart.js/auto";
 import { Chart, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import Dropdown from "./Dropdown";
 
 Chart.register(Tooltip, Legend);
+const options = [
+  {
+    title: "Total Points",
+    url: TopScorersUrl
+  },
+  {
+    title: "Total Assists",
+    url: TopAssistsUrl
+  },
+  {
+    title: "Total Rebounds",
+    url: TopReboundsUrl
+  },
+];
 
 const PlayerStats = () => {
   const [leagueLeaders, setLeagueLeaders] = useState([]);
+  const [criteria, setCriteria] = useState(options[0]);
 
   const chartData = {
-    labels: leagueLeaders.slice(0, 5).map(player => player.player_name),
+    labels: leagueLeaders.slice(0, 5).map((player) => player.player_name),
     datasets: [
       {
         axis: "y",
-        label: 'Goals: ',
-        data: leagueLeaders.slice(0, 5).map(player => player.field_goals),
+        label: "Goals ",
+        data: leagueLeaders.slice(0, 5).map((player) => player.field_goals),
         fill: true,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
@@ -24,21 +40,10 @@ const PlayerStats = () => {
           "rgba(255, 205, 86, 0.2)",
           "rgba(75, 192, 192, 0.2)",
           "rgba(54, 162, 235, 0.2)",
-          // "rgba(153, 102, 255, 0.2)",
-          // "rgba(201, 203, 207, 0.2)",
         ],
-        // borderColor: [
-        //   "rgb(255, 99, 132)",
-        //   "rgb(255, 159, 64)",
-        //   "rgb(255, 205, 86)",
-        //   "rgb(75, 192, 192)",
-        //   "rgb(54, 162, 235)",
-        //   // "rgb(153, 102, 255)",
-        //   // "rgb(201, 203, 207)",
-        // ],
         borderWidth: 0,
         barPercentage: 1.0,
-        categoryPercentage: 1.0
+        categoryPercentage: 1.0,
       },
     ],
   };
@@ -46,18 +51,27 @@ const PlayerStats = () => {
   useEffect(() => {
     const fetchApiData = async () => {
       try {
-        const response = await axios.get(LeagueScoreUrl);
-        const data = response.data;
-        setLeagueLeaders(data.results);
+        const response = await axios.get(criteria.url);
+        setLeagueLeaders(response.data.results);
       } catch (error) {
         console.log(error);
       }
     };
     fetchApiData();
-  }, []);
+  }, [criteria.url]);
 
   return (
-    <div>
+    <div className="playerStats">
+      <h1 className="title">League Leaders</h1>
+      <div>
+        <Dropdown
+          options={options}
+          onSelect={(event) => {
+            setCriteria(event);
+          }}
+          
+        />
+      </div>
       <Bar
         data={chartData}
         options={{
