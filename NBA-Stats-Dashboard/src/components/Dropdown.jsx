@@ -1,9 +1,11 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-const Dropdown = ( {title, options, onSelect}) => {
+const Dropdown = ({ title, options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(title || options[0].title || 'Select Criteria')
+  const [selectedOption, setSelectedOption] = useState(
+    title || options[0].title || "Select Criteria"
+  );
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -11,14 +13,14 @@ const Dropdown = ( {title, options, onSelect}) => {
 
   const handleSelect = (option) => {
     onSelect(option);
-    setSelectedOption(option.title)
+    setSelectedOption(option.title);
     setIsOpen(false);
   };
 
   return (
     <div className="dropdown">
       <button className="dropdown__btn" onClick={toggleDropdown}>
-       <span> {selectedOption}</span>
+        <span> {selectedOption}</span>
         <img
           src="../src/assets/search.png"
           height="15px"
@@ -40,9 +42,9 @@ const Dropdown = ( {title, options, onSelect}) => {
 };
 
 Dropdown.propTypes = {
-    title: PropTypes.string,
-    options: PropTypes.arrayOf(PropTypes.object).isRequired,
-    onSelect: PropTypes.func.isRequired,
-  };
+  title: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onSelect: PropTypes.func.isRequired,
+};
 
 export default Dropdown;

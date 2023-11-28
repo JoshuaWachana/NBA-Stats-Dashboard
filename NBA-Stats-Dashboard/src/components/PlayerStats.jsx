@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { TopScorersUrl, TopAssistsUrl, TopReboundsUrl } from "../utils/apiEndpoints";
+import {
+  TopScorersUrl,
+  TopAssistsUrl,
+  TopReboundsUrl,
+} from "../utils/apiEndpoints";
 import "chart.js/auto";
 import { Chart, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
@@ -10,15 +14,15 @@ Chart.register(Tooltip, Legend);
 const options = [
   {
     title: "Total Points",
-    url: TopScorersUrl
+    url: TopScorersUrl,
   },
   {
     title: "Total Assists",
-    url: TopAssistsUrl
+    url: TopAssistsUrl,
   },
   {
     title: "Total Rebounds",
-    url: TopReboundsUrl
+    url: TopReboundsUrl,
   },
 ];
 
@@ -69,7 +73,6 @@ const PlayerStats = () => {
           onSelect={(event) => {
             setCriteria(event);
           }}
-          
         />
       </div>
       <Bar
