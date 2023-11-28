@@ -3,7 +3,7 @@
   --beige: #f5f5dc;
   --white: #ffffff;
   --blue: #10448d;
-  --gray: #e5e5e5;
+  --gray: #f9f9f9;
 }
 
 * {
@@ -86,4 +86,48 @@
       "mainContent"
       "footer";
   }
+}
+
+/* PlayerStats Page */
+
+.playerStats {
+  padding: 40px 30px;
+}
+
+.title {
+  text-align: center;
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown__btn {
+  background-color: var(--gray);
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown__option {
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown__option li {
+  color: black;
+  padding: 12px 16px;
+  list-style: none;
+}
+
+.dropdown__option li:hover {
+  background-color: var(--gray);
 }
