@@ -1,6 +1,8 @@
 import { Chart } from 'react-google-charts';
+import usBirthPlaceData from '../data/us-birthplaces.json';
 
 function USMap() {
+  console.log(usBirthPlaceData);
   const data = [
     ['State', 'Latitude'],
     ['California', 200],
