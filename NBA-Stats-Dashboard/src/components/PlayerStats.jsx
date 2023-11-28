@@ -67,22 +67,22 @@ const PlayerStats = () => {
   return (
     <div className="playerStats">
       <h1 className="title">League Leaders</h1>
-      <div>
-        <Dropdown
-          options={options}
-          onSelect={(event) => {
-            setCriteria(event);
+      <Dropdown
+        options={options}
+        onSelect={(event) => {
+          setCriteria(event);
+        }}
+      />
+      <div className="playerStats__graph">
+        <Bar
+          data={chartData}
+          options={{
+            responsive: true,
+            indexAxis: "y",
+            maintainAspectRatio: true,
           }}
         />
       </div>
-      <Bar
-        data={chartData}
-        options={{
-          responsive: true,
-          indexAxis: "y",
-          maintainAspectRatio: true,
-        }}
-      />
     </div>
   );
 };

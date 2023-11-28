@@ -86,11 +86,17 @@
   text-align: center;
 }
 
+.playerStats__graph {
+  border: 1px solid var(--beige);
+  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* Dropdown */
 
 .dropdown {
   position: relative;
-  /* width: 100%; */
   width: 30%;
   margin: 40px auto;
   background-color: var(--gray);
@@ -101,7 +107,6 @@
   color: black;
   padding: 10px;
   font-size: 16px;
-  /* border: none; */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -130,7 +135,7 @@
 @media (max-width: 600px) {
   .App {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 7fr 1fr;
+    grid-template-rows: 1fr 1fr auto 1fr;
     grid-template-areas:
       "header"
       "navMenu"
@@ -139,5 +144,10 @@
   }
   .dropdown {
     width: 60%;
+    margin: 20px auto;
+  }
+  .playerStats__graph {
+    width: 100%;
+    padding: 30px 5px;
   }
 }
