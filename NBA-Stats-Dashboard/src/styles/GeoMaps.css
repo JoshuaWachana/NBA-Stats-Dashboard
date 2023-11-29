@@ -12,11 +12,12 @@
 
 .mapSelectionField label {
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .mapSelectionField input {
-  margin-left: 5px;
+  margin-left: 6px;
+  display: inline-block;
 }
 
 .mapChartContainer {

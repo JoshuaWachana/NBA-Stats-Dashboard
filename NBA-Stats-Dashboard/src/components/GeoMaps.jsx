@@ -37,29 +37,24 @@ function GeoMaps() {
       <div className='mapSection mapSection3'>
         <fieldset className='mapSelectionField'>
           <legend>MAP Selection</legend>
-          <label>
-            <input
-              id='us-map'
-              type='radio'
-              name='map'
-              value='us'
-              checked={mapSelected.us}
-              onChange={mapSelection}
-            />{' '}
-            US Map
-          </label>
-          <label>
-            {' '}
-            <input
-              id='world-map'
-              type='radio'
-              name='map'
-              value='world'
-              checked={mapSelected.world}
-              onChange={mapSelection}
-            />{' '}
-            World Map
-          </label>
+          <input
+            id='us-map'
+            type='radio'
+            name='map'
+            value='us'
+            checked={mapSelected.us}
+            onChange={mapSelection}
+          />
+          <label htmlFor='us-map'>US Map</label>
+          <input
+            id='world-map'
+            type='radio'
+            name='map'
+            value='world'
+            checked={mapSelected.world}
+            onChange={mapSelection}
+          />
+          <label htmlFor='world-map'>World Map</label>
         </fieldset>
       </div>
 
