@@ -9,8 +9,12 @@ import "chart.js/auto";
 import { Chart, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import Dropdown from "./Dropdown";
+import AveragePoints from '../data/average-points.json';
+import AverageRebounds from '../data/average-rebounds.json';
+import AverageAssists from '../data/average-assists.json';
 
 Chart.register(Tooltip, Legend);
+
 const options = [
   {
     title: "Total Points",
@@ -24,28 +28,44 @@ const options = [
     title: "Total Rebounds",
     url: TopReboundsUrl,
   },
+  {
+    title: "Average Points",
+    data: AveragePoints,
+  },
+  {
+    title: "Average Rebounds",
+    data: AverageRebounds,
+  },
+  {
+    title: "Average Assists",
+    data: AverageAssists,
+  }
 ];
 
 const PlayerStats = () => {
   const [leagueLeaders, setLeagueLeaders] = useState([]);
   const [criteria, setCriteria] = useState(options[0]);
 
+  const getLabels = () => {
+    const key = criteria.url ? 'player_name' : 'playerName';
+    return leagueLeaders.slice(0, 5).map((player) => player[key])
+  }
+
+  const getGraphData = () => {
+    const key = criteria.url ? 'field_goals' : 'averagePerGame';
+    return leagueLeaders.slice(0, 5).map((player) => player[key]) 
+  }
+
   const chartData = {
-    labels: leagueLeaders.slice(0, 5).map((player) => player.player_name),
+    labels: getLabels(),
     datasets: [
       {
         axis: "y",
         label: "Goals ",
-        data: leagueLeaders.slice(0, 5).map((player) => player.field_goals),
+        data: getGraphData(),
         fill: true,
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-          "rgba(255, 205, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-        ],
-        borderWidth: 0,
+        backgroundColor: ['#0095ff', '#00aaff', '#00bfff', '#00d4ff', '#00eaff'],
+        borderWidth: 1,
         barPercentage: 1.0,
         categoryPercentage: 1.0,
       },
@@ -54,15 +74,19 @@ const PlayerStats = () => {
 
   useEffect(() => {
     const fetchApiData = async () => {
-      try {
-        const response = await axios.get(criteria.url);
-        setLeagueLeaders(response.data.results);
-      } catch (error) {
-        console.log(error);
+      if(criteria.url) {
+        try {
+          const response = await axios.get(criteria.url);
+          setLeagueLeaders(response.data.results);
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        setLeagueLeaders(criteria.data);
       }
     };
     fetchApiData();
-  }, [criteria.url]);
+  }, [criteria]);
 
   return (
     <div className="playerStats">
