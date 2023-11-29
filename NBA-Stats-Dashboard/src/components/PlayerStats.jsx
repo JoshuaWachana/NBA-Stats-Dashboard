@@ -12,6 +12,7 @@ import Dropdown from "./Dropdown";
 import AveragePoints from '../data/average-points.json';
 import AverageRebounds from '../data/average-rebounds.json';
 import AverageAssists from '../data/average-assists.json';
+import '../styles/PlayerStats.css'
 
 Chart.register(Tooltip, Legend);
 
@@ -90,7 +91,7 @@ const PlayerStats = () => {
 
   return (
     <div className="playerStats">
-      <h1 className="title">League Leaders</h1>
+      <h1 className="playerStats__title">League Leaders</h1>
       <Dropdown
         options={options}
         onSelect={(event) => {

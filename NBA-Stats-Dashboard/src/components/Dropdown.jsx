@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import '../styles/Dropdown.css'
 
 const Dropdown = ({ title, options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
