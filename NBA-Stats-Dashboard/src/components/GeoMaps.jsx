@@ -1,9 +1,17 @@
 import USMap from './USMap';
 import WorldMap from './WorldMap';
+import { useState } from 'react';
 
 function GeoMaps() {
-  function mapSelection(e) {
-    alert(e.target.value);
+  const [mapSelected, setMapSelected] = useState({ us: true, world: false });
+  function mapSelection() {
+    setMapSelected((prevMapSelection) => {
+      return {
+        ...prevMapSelection,
+        us: !mapSelected.us,
+        world: !mapSelected.world,
+      };
+    });
   }
   return (
     <div>
@@ -19,7 +27,8 @@ function GeoMaps() {
             type='radio'
             name='map'
             value='us'
-            onChange={(e) => mapSelection(e)}
+            checked={mapSelected.us}
+            onChange={mapSelection}
           />
         </label>
         <label>
@@ -30,13 +39,14 @@ function GeoMaps() {
             type='radio'
             name='map'
             value='world'
-            onChange={(e) => mapSelection(e)}
+            checked={mapSelected.world}
+            onChange={mapSelection}
           />
         </label>
       </fieldset>
 
-      <USMap />
-      <WorldMap />
+      {mapSelected.us === true ? <USMap /> : <WorldMap />}
+
       <p>
         This is data on where NBA players were born. This data is comprehensive
         of NBA players past and present.{' '}
