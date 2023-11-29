@@ -13,7 +13,7 @@ function USMap() {
     region: 'US',
     displayMode: 'regions',
     resolution: 'provinces',
-    colorAxis: { colors: ['#0096FF', '#000000'] },
+    colorAxis: { colors: ['#00BFFF', '#000000'] },
     backgroundColor: '#F0FFFF',
     datalessRegionColor: '#FFFFFF',
     defaultColor: '#f5f5f5',
