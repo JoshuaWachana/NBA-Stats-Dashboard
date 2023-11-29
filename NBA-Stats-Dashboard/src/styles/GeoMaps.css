@@ -1,0 +1,36 @@
+.mapSelectionField {
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid var(--blue);
+}
+
+.mapSelectionField legend {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.mapSelectionField label {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.mapSelectionField input {
+  margin-left: 5px;
+}
+
+.mapChartContainer {
+  border: 2px solid red;
+}
+
+.mapChart {
+  border: 2px solid purple;
+}
+
+.mapSection1 {
+  color: var(--blue);
+}
+
+.mapSection2 {
+  font-style: italic;
+  color: var(--blue);
+}

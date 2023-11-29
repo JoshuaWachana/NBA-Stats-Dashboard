@@ -22,15 +22,16 @@
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1.5fr 8fr 0.5fr;
   grid-template-areas:
-    "header header"
-    "navMenu mainContent"
-    "navMenu footer";
+    'header header'
+    'navMenu mainContent'
+    'navMenu footer';
 }
 
 .majorSection {
   background-color: var(--white);
-  border: 1px solid var(--gray);
+  border: 10px solid var(--gray);
   border-radius: 10px;
+  padding: 10px;
 }
 
 .header {
@@ -74,16 +75,17 @@
 
 .footer {
   grid-area: footer;
+  color: var(--blue);
 }
 
 @media (max-width: 600px) {
   .App {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 7fr 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-      "header"
-      "navMenu"
-      "mainContent"
-      "footer";
+      'header'
+      'navMenu'
+      'mainContent'
+      'footer';
   }
 }

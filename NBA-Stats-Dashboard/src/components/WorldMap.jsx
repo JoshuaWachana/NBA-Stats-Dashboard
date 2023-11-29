@@ -6,11 +6,17 @@ function WorldMap() {
     country.Country,
     country.numOfPlayers,
   ]);
+  const options = {
+    colorAxis: { colors: ['#0096FF', '#000000'] },
+    backgroundColor: '#F0FFFF',
+    datalessRegionColor: '#FFFFFF',
+    defaultColor: '#f5f5f5',
+  };
   const data = [['Country', 'Players'], ...formatted_WorldBirthPlaceData];
   return (
-    <div>
-      <h2>World Map - Birthplaces</h2>
+    <div className='mapChartContainer'>
       <Chart
+        className='mapChart'
         chartEvents={[
           {
             eventName: 'select',
@@ -24,9 +30,10 @@ function WorldMap() {
           },
         ]}
         chartType='GeoChart'
-        width='50%'
-        height='200px'
+        width='70%'
+        height='300px'
         data={data}
+        options={options}
       />
     </div>
   );
