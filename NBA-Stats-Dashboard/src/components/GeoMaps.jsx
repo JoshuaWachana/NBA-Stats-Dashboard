@@ -38,7 +38,6 @@ function GeoMaps() {
         <fieldset className='mapSelectionField'>
           <legend>MAP Selection</legend>
           <label>
-            US Map
             <input
               id='us-map'
               type='radio'
@@ -46,11 +45,11 @@ function GeoMaps() {
               value='us'
               checked={mapSelected.us}
               onChange={mapSelection}
-            />
+            />{' '}
+            US Map
           </label>
           <label>
             {' '}
-            World Map
             <input
               id='world-map'
               type='radio'
@@ -58,7 +57,8 @@ function GeoMaps() {
               value='world'
               checked={mapSelected.world}
               onChange={mapSelection}
-            />
+            />{' '}
+            World Map
           </label>
         </fieldset>
       </div>
