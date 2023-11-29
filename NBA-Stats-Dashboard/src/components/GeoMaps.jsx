@@ -2,10 +2,38 @@ import USMap from './USMap';
 import WorldMap from './WorldMap';
 
 function GeoMaps() {
+  function mapSelection(e) {
+    alert(e.target.value);
+  }
   return (
     <div>
       <h1>Geo-Demographics - Birthplaces</h1>
       <h1>Where are the NBA Players from?</h1>
+
+      <fieldset>
+        <legend>MAP Selection</legend>
+        <label>
+          US Map
+          <input
+            id='us-map'
+            type='radio'
+            name='map'
+            value='us'
+            onChange={(e) => mapSelection(e)}
+          />
+        </label>
+        <label>
+          {' '}
+          World Map
+          <input
+            id='world-map'
+            type='radio'
+            name='map'
+            value='world'
+            onChange={(e) => mapSelection(e)}
+          />
+        </label>
+      </fieldset>
 
       <USMap />
       <WorldMap />
