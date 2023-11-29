@@ -1,5 +1,6 @@
 .playerStats {
   padding: 0 30px;
+  color: var(--blue);
 }
 
 .playerStats__title {
