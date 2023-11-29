@@ -30,7 +30,7 @@ function WorldMap() {
           },
         ]}
         chartType='GeoChart'
-        width='70%'
+        width='100%'
         height='300px'
         data={data}
         options={options}

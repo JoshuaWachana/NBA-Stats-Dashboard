@@ -23,7 +23,7 @@ function USMap() {
       <Chart
         className='mapChart'
         chartType='GeoChart'
-        width='70%'
+        width='100%'
         height='300px'
         data={data}
         options={options}

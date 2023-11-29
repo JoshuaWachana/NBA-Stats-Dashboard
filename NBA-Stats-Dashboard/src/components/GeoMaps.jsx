@@ -28,7 +28,7 @@ function GeoMaps() {
           season.{' '}
         </p>
         <p>
-          Reference:{' '}
+          Reference: The raw data was collected from{' '}
           <a href='https://www.basketball-reference.com/friv/birthplaces.fcgi'>
             basketball-reference
           </a>
