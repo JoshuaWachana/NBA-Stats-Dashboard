@@ -62,7 +62,7 @@ const PlayerStats = () => {
     datasets: [
       {
         axis: "y",
-        label: "Goals ",
+        label: criteria.title,
         data: getGraphData(),
         fill: true,
         backgroundColor: ['#0095ff', '#00aaff', '#00bfff', '#00d4ff', '#00eaff'],
