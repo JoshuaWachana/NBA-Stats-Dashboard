@@ -106,6 +106,7 @@ const PlayerStats = () => {
         setLeagueLeaders(criteria.data);
       }
     };
+
     fetchApiData();
   }, [criteria]);
 

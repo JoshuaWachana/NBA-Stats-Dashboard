@@ -24,7 +24,7 @@ function GeoMaps() {
       <div className='mapSection mapSection2'>
         <p>
           This is data on where NBA players were born. This data is
-          comprehensive of NBA players past and present up to the 2023 NBA
+          comprehensive of NBA players past and present up to the 2022-2023 NBA
           season.{' '}
         </p>
         <p>
