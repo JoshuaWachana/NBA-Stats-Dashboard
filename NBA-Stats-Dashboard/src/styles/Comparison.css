@@ -76,3 +76,17 @@
   font-weight: bold;
   font-size: 1.2em;
 }
+
+.playerExamples {
+  font-style: italic;
+  font-size: 0.75em;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .comparisonInputSection {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}

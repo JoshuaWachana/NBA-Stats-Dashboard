@@ -28,22 +28,78 @@ function Comparison() {
     const formData = e.target.elements;
     const player1NameSubmission = formData.player1.value.split(' ').join('_');
     const player2NameSubmission = formData.player2.value.split(' ').join('_');
-    setStatData({
-      player1: {
-        playerName: formData.player1.value,
-        playerNameForAPI: player1NameSubmission,
-        points: '26.6',
-        rebounds: '6.9',
-        assists: '3.5',
-      },
-      player2: {
-        playerName: formData.player2.value,
-        playerNameForAPI: player2NameSubmission,
-        points: '8.6',
-        rebounds: '11.5',
-        assists: '2.3',
-      },
-    });
+    getPlayerId(player1NameSubmission, player2NameSubmission);
+    e.target.reset();
+  }
+
+  async function getPlayerId(name1, name2) {
+    try {
+      const response1 = await fetch(
+        `https://www.balldontlie.io/api/v1/players?search=${name1}`
+      );
+      const data1 = await response1.json();
+      const playersDataObject1 = await data1.data;
+      let id1 = playersDataObject1[0].id;
+      if (id1 === undefined) {
+        id1 = playersDataObject1[0].player_id;
+      }
+
+      const response2 = await fetch(
+        `https://www.balldontlie.io/api/v1/players?search=${name2}`
+      );
+      const data2 = await response2.json();
+      const playersDataObject2 = await data2.data;
+      let id2 = playersDataObject2[0].id;
+      if (id2 === undefined) {
+        id2 = playersDataObject1[0].player_id;
+      }
+      getPlayerStats({ name1: name1, id1: id1, name2, id2: id2 });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getPlayerStats({ name1, id1, name2, id2 }) {
+    try {
+      const response1 = await fetch(
+        `https://www.balldontlie.io/api/v1/season_averages?season=2022&player_ids[]=${id1}`
+      );
+      const data1 = await response1.json();
+      const response2 = await fetch(
+        `https://www.balldontlie.io/api/v1/season_averages?season=2022&player_ids[]=${id2}`
+      );
+      const data2 = await response2.json();
+      if (data1.data.length > 0 && data1.data.length > 0) {
+        const player1Points = data1.data[0].pts;
+        const player2Points = data2.data[0].pts;
+        const player1Ast = data1.data[0].ast;
+        const player2Ast = data2.data[0].ast;
+        const player1Reb = data1.data[0].reb;
+        const player2Reb = data2.data[0].reb;
+        setStatData({
+          player1: {
+            playerName: name1.replace('_', ' '),
+            playerNameForAPI: name1,
+            points: player1Points,
+            rebounds: player1Reb,
+            assists: player1Ast,
+          },
+          player2: {
+            playerName: name2.replace('_', ' '),
+            playerNameForAPI: name2,
+            points: player2Points,
+            rebounds: player2Reb,
+            assists: player2Ast,
+          },
+        });
+      } else {
+        alert(
+          'Data for one of the players could not be fetched. Please type carefully!'
+        );
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const pointsData = [
@@ -84,6 +140,7 @@ function Comparison() {
       columnChartColor2,
     ],
   ];
+
   return (
     <div className='comparisonComponentContainer'>
       <div>
@@ -120,6 +177,10 @@ function Comparison() {
                 <input value='Compare' type='submit' />
               </div>
             </section>
+            <p className='playerExamples'>
+              Examples: James Harden, Chris Paul, Kevin Durant, Steven Adams,
+              Jeff Green, Kevin Love, LeBron James
+            </p>
           </fieldset>
         </form>
       </div>
