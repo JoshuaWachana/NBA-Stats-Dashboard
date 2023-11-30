@@ -9,10 +9,10 @@ import "chart.js/auto";
 import { Chart, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import Dropdown from "./Dropdown";
-import AveragePoints from '../data/average-points.json';
-import AverageRebounds from '../data/average-rebounds.json';
-import AverageAssists from '../data/average-assists.json';
-import '../styles/PlayerStats.css'
+import AveragePoints from "../data/average-points.json";
+import AverageRebounds from "../data/average-rebounds.json";
+import AverageAssists from "../data/average-assists.json";
+import "../styles/PlayerStats.css";
 
 Chart.register(Tooltip, Legend);
 
@@ -20,27 +20,39 @@ const options = [
   {
     title: "Total Points",
     url: TopScorersUrl,
+    dataApiKey: "PTS",
+    nameApiKey: "player_name",
   },
   {
     title: "Total Assists",
     url: TopAssistsUrl,
+    dataApiKey: "field_goals",
+    nameApiKey: "player_name",
   },
   {
     title: "Total Rebounds",
     url: TopReboundsUrl,
+    dataApiKey: "field_goals",
+    nameApiKey: "player_name",
   },
   {
     title: "Average Points",
     data: AveragePoints,
+    dataApiKey: "averagePerGame",
+    nameApiKey: "playerName",
   },
   {
     title: "Average Rebounds",
     data: AverageRebounds,
+    dataApiKey: "averagePerGame",
+    nameApiKey: "playerName",
   },
   {
     title: "Average Assists",
     data: AverageAssists,
-  }
+    dataApiKey: "averagePerGame",
+    nameApiKey: "playerName",
+  },
 ];
 
 const PlayerStats = () => {
@@ -48,14 +60,16 @@ const PlayerStats = () => {
   const [criteria, setCriteria] = useState(options[0]);
 
   const getLabels = () => {
-    const key = criteria.url ? 'player_name' : 'playerName';
-    return leagueLeaders.slice(0, 5).map((player) => player[key])
-  }
+    return leagueLeaders
+      .slice(0, 5)
+      .map((player) => player[criteria.nameApiKey]);
+  };
 
   const getGraphData = () => {
-    const key = criteria.url ? 'field_goals' : 'averagePerGame';
-    return leagueLeaders.slice(0, 5).map((player) => player[key]) 
-  }
+    return leagueLeaders
+      .slice(0, 5)
+      .map((player) => player[criteria.dataApiKey]);
+  };
 
   const chartData = {
     labels: getLabels(),
@@ -65,7 +79,13 @@ const PlayerStats = () => {
         label: criteria.title,
         data: getGraphData(),
         fill: true,
-        backgroundColor: ['#0095ff', '#00aaff', '#00bfff', '#00d4ff', '#00eaff'],
+        backgroundColor: [
+          "#0095ff",
+          "#00aaff",
+          "#00bfff",
+          "#00d4ff",
+          "#00eaff",
+        ],
         borderWidth: 1,
         barPercentage: 1.0,
         categoryPercentage: 1.0,
@@ -75,7 +95,7 @@ const PlayerStats = () => {
 
   useEffect(() => {
     const fetchApiData = async () => {
-      if(criteria.url) {
+      if (criteria.url) {
         try {
           const response = await axios.get(criteria.url);
           setLeagueLeaders(response.data.results);
