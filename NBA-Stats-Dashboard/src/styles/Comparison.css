@@ -1,0 +1,92 @@
+.comparisonComponentContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+  background-color: var(--baby-blue);
+}
+
+.comparisonForm {
+  background-color: var(--white);
+}
+
+.comparisonForm > fieldset {
+  padding: 10px;
+  border: 3px solid var(--blue);
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+.comparisonForm legend {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: var(--blue);
+}
+
+.comparisonForm label {
+  font-weight: bold;
+}
+
+.comparisonInputSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.comparisonInputSection input[type='submit'] {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  border-radius: 5px;
+  background-color: var(--gray);
+}
+
+.comparisonInputSection input[type='submit']:hover {
+  border: 3px solid var(--orange);
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.comparisonChartsSectionContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 3px solid var(--blue);
+  background-color: var(--gray);
+  gap: 30px;
+}
+
+.comparisonChartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+  background-color: var(--beige);
+  box-shadow: 0 0 10px 10px var(--blue);
+}
+
+.comparisonChartCategory {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.playerExamples {
+  font-style: italic;
+  font-size: 0.75em;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .comparisonInputSection {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
