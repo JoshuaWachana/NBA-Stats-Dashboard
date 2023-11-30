@@ -85,6 +85,10 @@ html {
   color: var(--blue);
 }
 
+.bold {
+  font-weight: bold;
+}
+
 @media (max-width: 600px) {
   .App {
     grid-template-columns: 1fr;
