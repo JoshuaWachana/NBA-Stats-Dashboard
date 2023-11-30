@@ -13,10 +13,16 @@
   box-sizing: border-box;
 }
 
-.App {
+html {
   background-color: var(--beige);
   min-height: 100vh;
   min-height: 100dvh;
+  max-width: 100vw;
+  max-width: 100dvw;
+}
+
+.App {
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 200px 8fr 0.5fr;
@@ -28,8 +34,9 @@
 
 .majorSection {
   background-color: var(--white);
-  border: 1px solid var(--gray);
+  border: 10px solid var(--gray);
   border-radius: 10px;
+  padding: 10px;
 }
 
 .header {
@@ -73,12 +80,13 @@
 
 .footer {
   grid-area: footer;
+  color: var(--blue);
 }
 
 @media (max-width: 600px) {
   .App {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 7fr 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
       "header"
       "navMenu"
