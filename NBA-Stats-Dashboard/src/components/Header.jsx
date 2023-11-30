@@ -1,14 +1,14 @@
-import '../styles/Header.css'
+import "../styles/Header.css";
 
 function Header() {
   return (
-    <div className='majorSection header'>
+    <div className="majorSection header">
       <img
-          src="../src/assets/banner.jpeg"
-          height="180px"
-          width="100%"
-          alt="Picture of NBA banner"
-        />
+        src="../src/assets/banner.jpeg"
+        height="180px"
+        width="100%"
+        alt="Picture of NBA banner"
+      />
     </div>
   );
 }
