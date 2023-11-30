@@ -1,0 +1,16 @@
+.header {
+  color: var(--blue);
+  background-color: var(--blue);
+  background-image: url('../assets/nba-logo.png');
+  display: flex;
+  justify-content: center;
+}
+
+.NBA {
+  background-color: var(--white);
+  padding: 0 2px 0 2px;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+}
