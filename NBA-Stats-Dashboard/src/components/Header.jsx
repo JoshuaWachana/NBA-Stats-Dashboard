@@ -2,7 +2,7 @@ import "../styles/Header.css";
 
 function Header() {
   return (
-    <div className="majorSection header">
+    <div className="header">
       <img
         src="../src/assets/banner.jpeg"
         height="180px"
