@@ -6,7 +6,7 @@ function NavMenu() {
       <Link to='/' className='navItem'>
         <img
           className='navItem__icon'
-          src='../src/assets/stats.png'
+          src='images/stats.png'
           height='24px'
           width='24px'
           alt='Icon of Statistics'
@@ -14,7 +14,7 @@ function NavMenu() {
         <span className='navItem__text'>League Leaders</span>
         <img
           className='navItem__icon-arrow'
-          src='../src/assets/arrow-right.png'
+          src='images/arrow-right.png'
           height='15px'
           width='15px'
           alt='Icon of right arrow'
@@ -23,7 +23,7 @@ function NavMenu() {
       <Link to='/compare' className='navItem'>
         <img
           className='navItem__icon'
-          src='../src/assets/compare.png'
+          src='images/compare.png'
           height='24px'
           width='24px'
           alt='Icon of Comparisons'
@@ -31,7 +31,7 @@ function NavMenu() {
         <span className='navItem__text'>Player Comparisons</span>
         <img
           className='navItem__icon-arrow'
-          src='../src/assets/arrow-right.png'
+          src='images/arrow-right.png'
           height='15px'
           width='15px'
           alt='Icon of right arrow'
@@ -40,7 +40,7 @@ function NavMenu() {
       <Link to='/geo-maps' className='navItem'>
         <img
           className='navItem__icon'
-          src='../src/assets/geomap.png'
+          src='images/geomap.png'
           height='24px'
           width='24px'
           alt='Icon of GeoMaps'
@@ -48,7 +48,7 @@ function NavMenu() {
         <span className='navItem__text'>Geo-Demographics</span>
         <img
           className='navItem__icon-arrow'
-          src='../src/assets/arrow-right.png'
+          src='images/arrow-right.png'
           height='15px'
           width='15px'
           alt='Icon of right arrow'

@@ -23,7 +23,7 @@ const Dropdown = ({ title, options, onSelect }) => {
       <button className='dropdown__btn' onClick={toggleDropdown}>
         <span> {selectedOption}</span>
         <img
-          src='../src/assets/search.png'
+          src='images/search.png'
           height='15px'
           width='15px'
           alt='Icon of search'
