@@ -1,8 +1,7 @@
 .header {
   color: var(--blue);
   background-color: var(--blue);
-  background-image: url('./images/nba-logo.png');
-  background-repeat: repeat-x;
+  background-image: url('../images/nba-logo.png');
   display: flex;
   justify-content: center;
 }
