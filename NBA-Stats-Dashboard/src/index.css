@@ -5,7 +5,11 @@
   --blue: #10448d;
   --baby-blue: #f0ffff;
   --gray: #e5e5e5;
+<<<<<<< HEAD
   --light-gray: #f9f9f9;
+=======
+  --nba-red: #e8092a;
+>>>>>>> development
   --orange: #ffa500;
 }
 
@@ -26,9 +30,8 @@ html {
 .App {
   padding: 20px;
   display: grid;
-  gap: 10px;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 3fr 9fr 0.5fr;
+  grid-template-rows: 200px 8fr 0.5fr;
   grid-template-areas:
     "header header"
     "navMenu mainContent"
@@ -40,10 +43,6 @@ html {
   border: 10px solid var(--gray);
   border-radius: 10px;
   padding: 10px;
-}
-
-.header {
-  grid-area: header;
 }
 
 .mainContent {
@@ -69,8 +68,8 @@ html {
   padding: 0 10px;
 }
 .navItem__text:hover {
-  background-color: var(--white);
-  color: var(--blue);
+  background-color: var(--nba-red);
+  color: var(--white);
 }
 
 .navItem__icon {
