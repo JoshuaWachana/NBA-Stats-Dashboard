@@ -1,0 +1,22 @@
+.playerStats {
+  padding: 0 30px;
+  color: var(--blue);
+}
+
+.playerStats__title {
+  text-align: center;
+}
+
+.playerStats__graph {
+  border: 1px solid var(--beige);
+  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .playerStats__graph {
+    width: 100%;
+    padding: 30px 5px;
+  }
+}

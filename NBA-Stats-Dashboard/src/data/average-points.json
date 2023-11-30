@@ -1,0 +1,27 @@
+[
+    {
+        "playerName": "Joel Embiid",
+        "averagePerGame": 33.1,
+        "unit": "ppg"
+    },
+    {
+        "playerName": "Luka Doncic",
+        "averagePerGame": 32.4,
+        "unit": "ppg"
+    },
+    {
+        "playerName": "Damian Lillard",
+        "averagePerGame": 32.2,
+        "unit": "ppg"
+    },
+    {
+        "playerName": "Shai Gilgeous-Alexander",
+        "averagePerGame": 31.4,
+        "unit": "ppg"
+    },
+    {
+        "playerName": "Giannis Antetokounmpo",
+        "averagePerGame": 31.1,
+        "unit": "ppg"
+    }
+]

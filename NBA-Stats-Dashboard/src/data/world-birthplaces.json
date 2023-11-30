@@ -1,93 +1,366 @@
 [
-  { "Country": "Angola", "numOfPlayers": 1 },
-  { "Country": "Antigua and Barbuda", "numOfPlayers": 1 },
-  { "Country": "Argentina", "numOfPlayers": 15 },
-  { "Country": "Australia", "numOfPlayers": 28 },
-  { "Country": "Austria", "numOfPlayers": 1 },
-  { "Country": "Bahamas", "numOfPlayers": 6 },
-  { "Country": "Belgium", "numOfPlayers": 4 },
-  { "Country": "Bosnia and Herzegovina", "numOfPlayers": 13 },
-  { "Country": "Brazil", "numOfPlayers": 18 },
-  { "Country": "British Virgin Islands", "numOfPlayers": 1 },
-  { "Country": "Bulgaria", "numOfPlayers": 1 },
-  { "Country": "Cameroon", "numOfPlayers": 5 },
-  { "Country": "Canada", "numOfPlayers": 54 },
-  { "Country": "Cape Verde", "numOfPlayers": 1 },
-  { "Country": "China", "numOfPlayers": 7 },
-  { "Country": "Colombia", "numOfPlayers": 1 },
-  { "Country": "Croatia", "numOfPlayers": 18 },
-  { "Country": "Cuba", "numOfPlayers": 3 },
-  { "Country": "Cyprus", "numOfPlayers": 1 },
-  { "Country": "Czech Republic", "numOfPlayers": 5 },
-  { "Country": "CD", "numOfPlayers": 6 },
-  { "Country": "Denmark", "numOfPlayers": 2 },
-  { "Country": "Dominica", "numOfPlayers": 1 },
-  { "Country": "Dominican Republic", "numOfPlayers": 8 },
-  { "Country": "Egypt", "numOfPlayers": 2 },
-  { "Country": "Estonia", "numOfPlayers": 1 },
-  { "Country": "Finland", "numOfPlayers": 2 },
-  { "Country": "France", "numOfPlayers": 38 },
-  { "Country": "French Guiana", "numOfPlayers": 2 },
-  { "Country": "Gabon", "numOfPlayers": 2 },
-  { "Country": "Georgia", "numOfPlayers": 6 },
-  { "Country": "Germany", "numOfPlayers": 27 },
-  { "Country": "Ghana", "numOfPlayers": 2 },
-  { "Country": "Greece", "numOfPlayers": 10 },
-  { "Country": "Guadeloupe", "numOfPlayers": 3 },
-  { "Country": "Guinea", "numOfPlayers": 2 },
-  { "Country": "Guyana", "numOfPlayers": 2 },
-  { "Country": "Haiti", "numOfPlayers": 5 },
-  { "Country": "Hungary", "numOfPlayers": 1 },
-  { "Country": "Iceland", "numOfPlayers": 1 },
-  { "Country": "Ireland", "numOfPlayers": 1 },
-  { "Country": "Iran", "numOfPlayers": 1 },
-  { "Country": "Israel", "numOfPlayers": 4 },
-  { "Country": "Italy", "numOfPlayers": 11 },
-  { "Country": "Jamaica", "numOfPlayers": 8 },
-  { "Country": "Japan", "numOfPlayers": 4 },
-  { "Country": "Latvia", "numOfPlayers": 7 },
-  { "Country": "Lebanon", "numOfPlayers": 2 },
-  { "Country": "Lithuania", "numOfPlayers": 14 },
-  { "Country": "Luxembourg", "numOfPlayers": 1 },
-  { "Country": "Mali", "numOfPlayers": 2 },
-  { "Country": "Martinique", "numOfPlayers": 1 },
-  { "Country": "Mexico", "numOfPlayers": 4 },
-  { "Country": "Montenegro", "numOfPlayers": 7 },
-  { "Country": "Morocco", "numOfPlayers": 1 },
-  { "Country": "Netherlands", "numOfPlayers": 6 },
-  { "Country": "New Zealand", "numOfPlayers": 4 },
-  { "Country": "Nigeria", "numOfPlayers": 15 },
-  { "Country": "Norway", "numOfPlayers": 1 },
-  { "Country": "Panama", "numOfPlayers": 4 },
-  { "Country": "Poland", "numOfPlayers": 3 },
-  { "Country": "Portugal", "numOfPlayers": 1 },
-  { "Country": "Puerto Rico", "numOfPlayers": 8 },
-  { "Country": "Republic of Korea", "numOfPlayers": 1 },
-  { "Country": "Republic of North Macedonia", "numOfPlayers": 2 },
-  { "Country": "Republic of the Congo", "numOfPlayers": 1 },
-  { "Country": "Romania", "numOfPlayers": 2 },
-  { "Country": "Russia", "numOfPlayers": 11 },
-  { "Country": "Saint Lucia", "numOfPlayers": 1 },
-  { "Country": "Saint Vincent and the Grenadines", "numOfPlayers": 1 },
-  { "Country": "Senegal", "numOfPlayers": 13 },
-  { "Country": "Serbia", "numOfPlayers": 26 },
-  { "Country": "Slovakia", "numOfPlayers": 1 },
-  { "Country": "Slovenia", "numOfPlayers": 11 },
-  { "Country": "South Africa", "numOfPlayers": 1 },
-  { "Country": "South Sudan", "numOfPlayers": 6 },
-  { "Country": "Spain", "numOfPlayers": 18 },
-  { "Country": "Sudan", "numOfPlayers": 2 },
-  { "Country": "Sweden", "numOfPlayers": 3 },
-  { "Country": "Switzerland", "numOfPlayers": 4 },
-  { "Country": "Taiwan", "numOfPlayers": 1 },
-  { "Country": "Trinidad and Tobago", "numOfPlayers": 2 },
-  { "Country": "Tunisia", "numOfPlayers": 1 },
-  { "Country": "Turkey", "numOfPlayers": 11 },
-  { "Country": "U.S. Virgin Islands", "numOfPlayers": 3 },
-  { "Country": "Ukraine", "numOfPlayers": 9 },
-  { "Country": "United Kingdom", "numOfPlayers": 13 },
-  { "Country": "United Republic of Tanzania", "numOfPlayers": 1 },
-  { "Country": "US", "numOfPlayers": 4376 },
-  { "Country": "Uruguay", "numOfPlayers": 1 },
-  { "Country": "Venezuela", "numOfPlayers": 2 }
+  {
+    "Country": "Angola",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Antigua and Barbuda",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Argentina",
+    "numOfPlayers": 15
+  },
+  {
+    "Country": "Australia",
+    "numOfPlayers": 28
+  },
+  {
+    "Country": "Austria",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Bahamas",
+    "numOfPlayers": 6
+  },
+  {
+    "Country": "Belgium",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Bosnia and Herzegovina",
+    "numOfPlayers": 13
+  },
+  {
+    "Country": "Brazil",
+    "numOfPlayers": 18
+  },
+  {
+    "Country": "British Virgin Islands",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Bulgaria",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Cameroon",
+    "numOfPlayers": 5
+  },
+  {
+    "Country": "Canada",
+    "numOfPlayers": 54
+  },
+  {
+    "Country": "Cape Verde",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "China",
+    "numOfPlayers": 7
+  },
+  {
+    "Country": "Colombia",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Croatia",
+    "numOfPlayers": 18
+  },
+  {
+    "Country": "Cuba",
+    "numOfPlayers": 3
+  },
+  {
+    "Country": "Cyprus",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Czech Republic",
+    "numOfPlayers": 5
+  },
+  {
+    "Country": "CD",
+    "numOfPlayers": 6
+  },
+  {
+    "Country": "Denmark",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Dominica",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Dominican Republic",
+    "numOfPlayers": 8
+  },
+  {
+    "Country": "Egypt",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Estonia",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Finland",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "France",
+    "numOfPlayers": 38
+  },
+  {
+    "Country": "French Guiana",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Gabon",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Georgia",
+    "numOfPlayers": 6
+  },
+  {
+    "Country": "Germany",
+    "numOfPlayers": 27
+  },
+  {
+    "Country": "Ghana",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Greece",
+    "numOfPlayers": 10
+  },
+  {
+    "Country": "Guadeloupe",
+    "numOfPlayers": 3
+  },
+  {
+    "Country": "Guinea",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Guyana",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Haiti",
+    "numOfPlayers": 5
+  },
+  {
+    "Country": "Hungary",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Iceland",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Ireland",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Iran",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Israel",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Italy",
+    "numOfPlayers": 11
+  },
+  {
+    "Country": "Jamaica",
+    "numOfPlayers": 8
+  },
+  {
+    "Country": "Japan",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Latvia",
+    "numOfPlayers": 7
+  },
+  {
+    "Country": "Lebanon",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Lithuania",
+    "numOfPlayers": 14
+  },
+  {
+    "Country": "Luxembourg",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Mali",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Martinique",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Mexico",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Montenegro",
+    "numOfPlayers": 7
+  },
+  {
+    "Country": "Morocco",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Netherlands",
+    "numOfPlayers": 6
+  },
+  {
+    "Country": "New Zealand",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Nigeria",
+    "numOfPlayers": 15
+  },
+  {
+    "Country": "Norway",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Panama",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Poland",
+    "numOfPlayers": 3
+  },
+  {
+    "Country": "Portugal",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Puerto Rico",
+    "numOfPlayers": 8
+  },
+  {
+    "Country": "Republic of Korea",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Republic of North Macedonia",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Republic of the Congo",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Romania",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Russia",
+    "numOfPlayers": 11
+  },
+  {
+    "Country": "Saint Lucia",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Saint Vincent and the Grenadines",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Senegal",
+    "numOfPlayers": 13
+  },
+  {
+    "Country": "Serbia",
+    "numOfPlayers": 26
+  },
+  {
+    "Country": "Slovakia",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Slovenia",
+    "numOfPlayers": 11
+  },
+  {
+    "Country": "South Africa",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "South Sudan",
+    "numOfPlayers": 6
+  },
+  {
+    "Country": "Spain",
+    "numOfPlayers": 18
+  },
+  {
+    "Country": "Sudan",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Sweden",
+    "numOfPlayers": 3
+  },
+  {
+    "Country": "Switzerland",
+    "numOfPlayers": 4
+  },
+  {
+    "Country": "Taiwan",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Trinidad and Tobago",
+    "numOfPlayers": 2
+  },
+  {
+    "Country": "Tunisia",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Turkey",
+    "numOfPlayers": 11
+  },
+  {
+    "Country": "U.S. Virgin Islands",
+    "numOfPlayers": 3
+  },
+  {
+    "Country": "Ukraine",
+    "numOfPlayers": 9
+  },
+  {
+    "Country": "United Kingdom",
+    "numOfPlayers": 13
+  },
+  {
+    "Country": "United Republic of Tanzania",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "US",
+    "numOfPlayers": 4376
+  },
+  {
+    "Country": "Uruguay",
+    "numOfPlayers": 1
+  },
+  {
+    "Country": "Venezuela",
+    "numOfPlayers": 2
+  }
 ]
