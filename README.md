@@ -1,6 +1,6 @@
 # NBA Stats Dashboard Project - Joshua Wachana and Harshita Jaiswal
 
-This is a quick and basic dashboard application put together by Harshita as part of a class project
+This is a quick and basic dashboard application put together by Harshita and I as part of a class project
 
 ## Languages, Tools, Technology & Libraries
 - Html, CSS, JS, JSX
