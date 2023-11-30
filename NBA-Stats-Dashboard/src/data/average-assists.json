@@ -1,0 +1,27 @@
+[
+    {
+        "playerName": "James Harden",
+        "averagePerGame": 10.7,
+        "unit": "apg"
+    },
+    {
+        "playerName": "Trae Young",
+        "averagePerGame": 10.2,
+        "unit": "apg"
+    },
+    {
+        "playerName": "Nikola Jokic",
+        "averagePerGame": 9.8,
+        "unit": "apg"
+    },
+    {
+        "playerName": "Chris Paul",
+        "averagePerGame": 8.9,
+        "unit": "apg"
+    },
+    {
+        "playerName": "Ja Morant",
+        "averagePerGame": 8.1,
+        "unit": "apg"
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "playerName": "Domantas Sabonis",
+        "averagePerGame": 12.3,
+        "unit": "rpg"
+    },
+    {
+        "playerName": "Nikola Jokic",
+        "averagePerGame": 11.8,
+        "unit": "rpg"
+    },
+    {
+        "playerName": "Giannis Antetokounmpo",
+        "averagePerGame": 11.8,
+        "unit": "rpg"
+    },
+    {
+        "playerName": "Rudy Gobert",
+        "averagePerGame": 11.6,
+        "unit": "rpg"
+    },
+    {
+        "playerName": "Clint Capela",
+        "averagePerGame": 11.0,
+        "unit": "rpg"
+    }
+]
