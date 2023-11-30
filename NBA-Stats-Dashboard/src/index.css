@@ -28,7 +28,7 @@ html {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1.5fr 8fr 0.5fr;
+  grid-template-rows: 3fr 9fr 0.5fr;
   grid-template-areas:
     "header header"
     "navMenu mainContent"
