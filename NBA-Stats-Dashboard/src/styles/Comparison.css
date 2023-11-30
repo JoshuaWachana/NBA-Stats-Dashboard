@@ -1,0 +1,8 @@
+.comparison {
+  padding: 0 30px;
+  color: var(--blue);
+}
+
+.comparison__title {
+  text-align: center;
+}
