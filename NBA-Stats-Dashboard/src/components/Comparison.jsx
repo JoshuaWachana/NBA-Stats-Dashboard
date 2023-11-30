@@ -3,22 +3,7 @@ import ComparisonChart from './ComparisonChart';
 import { useState } from 'react';
 
 function Comparison() {
-  const [statData, setStatData] = useState({
-    player1: {
-      playerName: 'Jaylen Brown',
-      playerNameForAPI: 'Jaylen_Brown',
-      points: '26.6',
-      rebounds: '6.9',
-      assists: '3.5',
-    },
-    player2: {
-      playerName: 'Steven Adams',
-      playerNameForAPI: 'Steven_Adams',
-      points: '8.6',
-      rebounds: '11.5',
-      assists: '2.3',
-    },
-  });
+  const [statData, setStatData] = useState(defaultStatData);
 
   const columnChartColor1 = '#5A5A5A';
   const columnChartColor2 = '#10448d';
@@ -193,5 +178,22 @@ function Comparison() {
     </div>
   );
 }
+
+const defaultStatData = {
+  player1: {
+    playerName: 'Jaylen Brown',
+    playerNameForAPI: 'Jaylen_Brown',
+    points: '26.6',
+    rebounds: '6.9',
+    assists: '3.5',
+  },
+  player2: {
+    playerName: 'Steven Adams',
+    playerNameForAPI: 'Steven_Adams',
+    points: '8.6',
+    rebounds: '11.5',
+    assists: '2.3',
+  },
+};
 
 export default Comparison;

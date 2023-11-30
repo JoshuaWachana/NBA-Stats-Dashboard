@@ -1,5 +1,6 @@
 import { Chart } from 'react-google-charts';
 
+// eslint-disable-next-line react/prop-types
 function ComparisonChart({ statData, statCategory }) {
   const data = [['Player', `${statCategory}`, { role: 'style' }], ...statData];
   return (
