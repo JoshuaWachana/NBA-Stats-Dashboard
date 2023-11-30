@@ -1,52 +1,202 @@
 [
-  { "State": "Alabama", "numOfPlayers": 96 },
-  { "State": "Alaska", "numOfPlayers": 2 },
-  { "State": "Arizona", "numOfPlayers": 19 },
-  { "State": "Arkansas", "numOfPlayers": 58 },
-  { "State": "California", "numOfPlayers": 441 },
-  { "State": "Colorado", "numOfPlayers": 20 },
-  { "State": "Connecticut", "numOfPlayers": 39 },
-  { "State": "Delaware", "numOfPlayers": 11 },
-  { "State": "District of Columbia", "numOfPlayers": 76 },
-  { "State": "Florida", "numOfPlayers": 131 },
-  { "State": "Georgia", "numOfPlayers": 148 },
-  { "State": "Hawaii", "numOfPlayers": 2 },
-  { "State": "Idaho", "numOfPlayers": 5 },
-  { "State": "Illinois", "numOfPlayers": 300 },
-  { "State": "Indiana", "numOfPlayers": 172 },
-  { "State": "Iowa", "numOfPlayers": 27 },
-  { "State": "Kansas", "numOfPlayers": 41 },
-  { "State": "Kentucky", "numOfPlayers": 119 },
-  { "State": "Louisiana", "numOfPlayers": 126 },
-  { "State": "Maine", "numOfPlayers": 2 },
-  { "State": "Maryland", "numOfPlayers": 80 },
-  { "State": "Massachusetts", "numOfPlayers": 47 },
-  { "State": "Michigan", "numOfPlayers": 170 },
-  { "State": "Minnesota", "numOfPlayers": 69 },
-  { "State": "Mississippi", "numOfPlayers": 93 },
-  { "State": "Missouri", "numOfPlayers": 78 },
-  { "State": "Montana", "numOfPlayers": 11 },
-  { "State": "Nebraska", "numOfPlayers": 16 },
-  { "State": "Nevada", "numOfPlayers": 15 },
-  { "State": "New Hampshire", "numOfPlayers": 1 },
-  { "State": "New Jersey", "numOfPlayers": 152 },
-  { "State": "New Mexico", "numOfPlayers": 7 },
-  { "State": "New York", "numOfPlayers": 437 },
-  { "State": "North Carolina", "numOfPlayers": 149 },
-  { "State": "North Dakota", "numOfPlayers": 6 },
-  { "State": "Ohio", "numOfPlayers": 205 },
-  { "State": "Oklahoma", "numOfPlayers": 50 },
-  { "State": "Oregon", "numOfPlayers": 34 },
-  { "State": "Pennsylvania", "numOfPlayers": 248 },
-  { "State": "Rhode Island", "numOfPlayers": 12 },
-  { "State": "South Carolina", "numOfPlayers": 51 },
-  { "State": "South Dakota", "numOfPlayers": 5 },
-  { "State": "Tennessee", "numOfPlayers": 99 },
-  { "State": "Texas", "numOfPlayers": 210 },
-  { "State": "Utah", "numOfPlayers": 26 },
-  { "State": "Virginia", "numOfPlayers": 91 },
-  { "State": "Washington", "numOfPlayers": 70 },
-  { "State": "West Virginia", "numOfPlayers": 28 },
-  { "State": "Wisconsin", "numOfPlayers": 74 },
-  { "State": "Wyoming", "numOfPlayers": 7 }
+  {
+    "State": "Alabama",
+    "numOfPlayers": 96
+  },
+  {
+    "State": "Alaska",
+    "numOfPlayers": 2
+  },
+  {
+    "State": "Arizona",
+    "numOfPlayers": 19
+  },
+  {
+    "State": "Arkansas",
+    "numOfPlayers": 58
+  },
+  {
+    "State": "California",
+    "numOfPlayers": 441
+  },
+  {
+    "State": "Colorado",
+    "numOfPlayers": 20
+  },
+  {
+    "State": "Connecticut",
+    "numOfPlayers": 39
+  },
+  {
+    "State": "Delaware",
+    "numOfPlayers": 11
+  },
+  {
+    "State": "District of Columbia",
+    "numOfPlayers": 76
+  },
+  {
+    "State": "Florida",
+    "numOfPlayers": 131
+  },
+  {
+    "State": "Georgia",
+    "numOfPlayers": 148
+  },
+  {
+    "State": "Hawaii",
+    "numOfPlayers": 2
+  },
+  {
+    "State": "Idaho",
+    "numOfPlayers": 5
+  },
+  {
+    "State": "Illinois",
+    "numOfPlayers": 300
+  },
+  {
+    "State": "Indiana",
+    "numOfPlayers": 172
+  },
+  {
+    "State": "Iowa",
+    "numOfPlayers": 27
+  },
+  {
+    "State": "Kansas",
+    "numOfPlayers": 41
+  },
+  {
+    "State": "Kentucky",
+    "numOfPlayers": 119
+  },
+  {
+    "State": "Louisiana",
+    "numOfPlayers": 126
+  },
+  {
+    "State": "Maine",
+    "numOfPlayers": 2
+  },
+  {
+    "State": "Maryland",
+    "numOfPlayers": 80
+  },
+  {
+    "State": "Massachusetts",
+    "numOfPlayers": 47
+  },
+  {
+    "State": "Michigan",
+    "numOfPlayers": 170
+  },
+  {
+    "State": "Minnesota",
+    "numOfPlayers": 69
+  },
+  {
+    "State": "Mississippi",
+    "numOfPlayers": 93
+  },
+  {
+    "State": "Missouri",
+    "numOfPlayers": 78
+  },
+  {
+    "State": "Montana",
+    "numOfPlayers": 11
+  },
+  {
+    "State": "Nebraska",
+    "numOfPlayers": 16
+  },
+  {
+    "State": "Nevada",
+    "numOfPlayers": 15
+  },
+  {
+    "State": "New Hampshire",
+    "numOfPlayers": 1
+  },
+  {
+    "State": "New Jersey",
+    "numOfPlayers": 152
+  },
+  {
+    "State": "New Mexico",
+    "numOfPlayers": 7
+  },
+  {
+    "State": "New York",
+    "numOfPlayers": 437
+  },
+  {
+    "State": "North Carolina",
+    "numOfPlayers": 149
+  },
+  {
+    "State": "North Dakota",
+    "numOfPlayers": 6
+  },
+  {
+    "State": "Ohio",
+    "numOfPlayers": 205
+  },
+  {
+    "State": "Oklahoma",
+    "numOfPlayers": 50
+  },
+  {
+    "State": "Oregon",
+    "numOfPlayers": 34
+  },
+  {
+    "State": "Pennsylvania",
+    "numOfPlayers": 248
+  },
+  {
+    "State": "Rhode Island",
+    "numOfPlayers": 12
+  },
+  {
+    "State": "South Carolina",
+    "numOfPlayers": 51
+  },
+  {
+    "State": "South Dakota",
+    "numOfPlayers": 5
+  },
+  {
+    "State": "Tennessee",
+    "numOfPlayers": 99
+  },
+  {
+    "State": "Texas",
+    "numOfPlayers": 210
+  },
+  {
+    "State": "Utah",
+    "numOfPlayers": 26
+  },
+  {
+    "State": "Virginia",
+    "numOfPlayers": 91
+  },
+  {
+    "State": "Washington",
+    "numOfPlayers": 70
+  },
+  {
+    "State": "West Virginia",
+    "numOfPlayers": 28
+  },
+  {
+    "State": "Wisconsin",
+    "numOfPlayers": 74
+  },
+  {
+    "State": "Wyoming",
+    "numOfPlayers": 7
+  }
 ]
