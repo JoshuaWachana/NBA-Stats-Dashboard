@@ -1,9 +1,10 @@
 .dropdown {
   position: relative;
   width: 30%;
-  margin: 20px auto;
+  margin: 10px auto;
   background-color: var(--light-gray);
   color: var(--blue);
+  border: 1px solid var(--blue);
 }
 
 .dropdown__btn {

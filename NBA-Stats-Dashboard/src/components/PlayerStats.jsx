@@ -1,57 +1,53 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
   TopScorersUrl,
   TopAssistsUrl,
   TopReboundsUrl,
-} from "../utils/apiEndpoints";
-import "chart.js/auto";
-import { Chart, Tooltip, Legend } from "chart.js";
-import { Bar } from "react-chartjs-2";
-import Dropdown from "./Dropdown";
-import AveragePoints from "../data/average-points.json";
-import AverageRebounds from "../data/average-rebounds.json";
-import AverageAssists from "../data/average-assists.json";
-import "../styles/PlayerStats.css";
-
-Chart.register(Tooltip, Legend);
+} from '../utils/apiEndpoints';
+import { Chart } from 'react-google-charts';
+import Dropdown from './Dropdown';
+import AveragePoints from '../data/average-points.json';
+import AverageRebounds from '../data/average-rebounds.json';
+import AverageAssists from '../data/average-assists.json';
+import '../styles/PlayerStats.css';
 
 const options = [
   {
-    title: "Total Points",
+    title: 'Total Points',
     url: TopScorersUrl,
-    dataApiKey: "PTS",
-    nameApiKey: "player_name",
+    dataApiKey: 'PTS',
+    nameApiKey: 'player_name',
   },
   {
-    title: "Total Assists",
+    title: 'Total Assists',
     url: TopAssistsUrl,
-    dataApiKey: "field_goals",
-    nameApiKey: "player_name",
+    dataApiKey: 'field_goals',
+    nameApiKey: 'player_name',
   },
   {
-    title: "Total Rebounds",
+    title: 'Total Rebounds',
     url: TopReboundsUrl,
-    dataApiKey: "field_goals",
-    nameApiKey: "player_name",
+    dataApiKey: 'field_goals',
+    nameApiKey: 'player_name',
   },
   {
-    title: "Average Points",
+    title: 'Average Points',
     data: AveragePoints,
-    dataApiKey: "averagePerGame",
-    nameApiKey: "playerName",
+    dataApiKey: 'averagePerGame',
+    nameApiKey: 'playerName',
   },
   {
-    title: "Average Rebounds",
+    title: 'Average Rebounds',
     data: AverageRebounds,
-    dataApiKey: "averagePerGame",
-    nameApiKey: "playerName",
+    dataApiKey: 'averagePerGame',
+    nameApiKey: 'playerName',
   },
   {
-    title: "Average Assists",
+    title: 'Average Assists',
     data: AverageAssists,
-    dataApiKey: "averagePerGame",
-    nameApiKey: "playerName",
+    dataApiKey: 'averagePerGame',
+    nameApiKey: 'playerName',
   },
 ];
 
@@ -71,26 +67,20 @@ const PlayerStats = () => {
       .map((player) => player[criteria.dataApiKey]);
   };
 
-  const chartData = {
-    labels: getLabels(),
-    datasets: [
-      {
-        axis: "y",
-        label: criteria.title,
-        data: getGraphData(),
-        fill: true,
-        backgroundColor: [
-          "#0095ff",
-          "#00aaff",
-          "#00bfff",
-          "#00d4ff",
-          "#00eaff",
-        ],
-        borderWidth: 1,
-        barPercentage: 1.0,
-        categoryPercentage: 1.0,
-      },
-    ],
+  const labels = getLabels();
+  const graphData = getGraphData();
+
+  const newChartData = [
+    ['Player', criteria.title],
+    [labels[0], Number(graphData[0])],
+    [labels[1], Number(graphData[1])],
+    [labels[2], Number(graphData[2])],
+    [labels[3], Number(graphData[3])],
+    [labels[4], Number(graphData[4])],
+  ];
+
+  const newOptions = {
+    chartArea: { width: '50%' },
   };
 
   useEffect(() => {
@@ -111,22 +101,24 @@ const PlayerStats = () => {
   }, [criteria]);
 
   return (
-    <div className="playerStats">
-      <h1 className="playerStats__title">League Leaders</h1>
-      <Dropdown
-        options={options}
-        onSelect={(event) => {
-          setCriteria(event);
-        }}
-      />
-      <div className="playerStats__graph">
-        <Bar
-          data={chartData}
-          options={{
-            responsive: true,
-            indexAxis: "y",
-            maintainAspectRatio: true,
-          }}
+    <div className='playerStats'>
+      <div className='dropDownMenuContainer'>
+        <h1 className='playerStats__title'>League Leaders</h1>
+        <div>
+          <Dropdown
+            options={options}
+            onSelect={(event) => {
+              setCriteria(event);
+            }}
+          />{' '}
+        </div>
+      </div>
+      <div className='playerStatsChartContainer'>
+        <Chart
+          chartType='BarChart'
+          height='150px'
+          data={newChartData}
+          options={newOptions}
         />
       </div>
     </div>

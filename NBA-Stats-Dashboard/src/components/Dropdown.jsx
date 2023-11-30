@@ -1,11 +1,11 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import '../styles/Dropdown.css'
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import '../styles/Dropdown.css';
 
 const Dropdown = ({ title, options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(
-    title || options[0].title || "Select Criteria"
+    title || options[0].title || 'Select Criteria'
   );
 
   const toggleDropdown = () => {
@@ -19,18 +19,18 @@ const Dropdown = ({ title, options, onSelect }) => {
   };
 
   return (
-    <div className="dropdown">
-      <button className="dropdown__btn" onClick={toggleDropdown}>
+    <div className='dropdown dropDownBorder'>
+      <button className='dropdown__btn' onClick={toggleDropdown}>
         <span> {selectedOption}</span>
         <img
-          src="../src/assets/search.png"
-          height="15px"
-          width="15px"
-          alt="Icon of search"
+          src='../src/assets/search.png'
+          height='15px'
+          width='15px'
+          alt='Icon of search'
         />
       </button>
       {isOpen && (
-        <div className="dropdown__option">
+        <div className='dropdown__option'>
           {options.map((option, index) => (
             <li key={index} onClick={() => handleSelect(option)}>
               {option.title}
