@@ -39,10 +39,6 @@ html {
   padding: 10px;
 }
 
-.header {
-  grid-area: header;
-}
-
 .mainContent {
   grid-area: mainContent;
 }
