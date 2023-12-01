@@ -139,6 +139,7 @@ function Comparison() {
                   id='player1-input'
                   type='text'
                   name='player1'
+                  required
                   placeholder='First Last'
                 />{' '}
               </div>
@@ -149,6 +150,7 @@ function Comparison() {
                   id='player2-input'
                   type='text'
                   name='player2'
+                  required
                   placeholder='First Last'
                 />{' '}
               </div>
