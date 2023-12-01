@@ -1,0 +1,7 @@
+{
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+        "^.+\\.svg$": "jest-svg-transformer",
+        "^.+\\.(css)$": "identity-obj-proxy"
+    }
+}
