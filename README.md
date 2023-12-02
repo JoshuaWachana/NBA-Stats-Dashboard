@@ -13,5 +13,5 @@ This is a quick and basic dashboard application put together by Harshita and I a
 - View a Geo Map visualization of where all NBA players were born since its founding
 
 ## Deployment 
-Link to Deployment: [Deployment](https://friendly-capybara-35d5e4.netlify.app/)
-Link to Live Video Presentation: [Presentation](https://media.pdx.edu/media/t/1_bmjkxbal)
+- Link to Deployment: [Deployment](https://friendly-capybara-35d5e4.netlify.app/)
+- Link to Live Video Presentation: [Presentation](https://media.pdx.edu/media/t/1_bmjkxbal)
