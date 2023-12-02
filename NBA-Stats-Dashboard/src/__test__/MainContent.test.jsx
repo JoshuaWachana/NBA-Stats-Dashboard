@@ -28,7 +28,7 @@ describe("MainContent Component", () => {
 
   it("Should render GeoMaps on geo-maps route", () => {
     const { getByTestId } = render(
-      <MemoryRouter initialEntries={['/geo-maps']}>
+      <MemoryRouter initialEntries={["/geo-maps"]}>
         <MainContent />
       </MemoryRouter>
     );
@@ -38,7 +38,7 @@ describe("MainContent Component", () => {
 
   it("Should render Comparison on compare route", () => {
     const { getByTestId } = render(
-      <MemoryRouter initialEntries={['/compare']}>
+      <MemoryRouter initialEntries={["/compare"]}>
         <MainContent />
       </MemoryRouter>
     );
