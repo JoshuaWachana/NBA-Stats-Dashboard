@@ -6,7 +6,7 @@ function ComparisonChart({ statData, statCategory }) {
   return (
     <div className="comparisonChartContainer">
       <div>
-        <p className="comparisonChartCategory">{statCategory}</p>
+        <h1 className="comparisonChartCategory">{statCategory}</h1>
       </div>
       <Chart chartType="ColumnChart" width="200px" data={data} />
     </div>
