@@ -1,18 +1,18 @@
-import '../styles/Comparison.css';
-import ComparisonChart from './ComparisonChart';
-import { useState } from 'react';
+import "../styles/Comparison.css";
+import ComparisonChart from "./ComparisonChart";
+import { useState } from "react";
 
 function Comparison() {
   const [statData, setStatData] = useState(defaultStatData);
 
-  const columnChartColor1 = '#5A5A5A';
-  const columnChartColor2 = '#10448d';
+  const columnChartColor1 = "#5A5A5A";
+  const columnChartColor2 = "#10448d";
 
   function handleSubmit(e) {
     e.preventDefault();
     const formData = e.target.elements;
-    const player1NameSubmission = formData.player1.value.split(' ').join('_');
-    const player2NameSubmission = formData.player2.value.split(' ').join('_');
+    const player1NameSubmission = formData.player1.value.split(" ").join("_");
+    const player2NameSubmission = formData.player2.value.split(" ").join("_");
     getPlayerId(player1NameSubmission, player2NameSubmission);
     e.target.reset();
   }
@@ -63,14 +63,14 @@ function Comparison() {
         const player2Reb = data2.data[0].reb;
         setStatData({
           player1: {
-            playerName: name1.replace('_', ' '),
+            playerName: name1.replace("_", " "),
             playerNameForAPI: name1,
             points: player1Points,
             rebounds: player1Reb,
             assists: player1Ast,
           },
           player2: {
-            playerName: name2.replace('_', ' '),
+            playerName: name2.replace("_", " "),
             playerNameForAPI: name2,
             points: player2Points,
             rebounds: player2Reb,
@@ -79,7 +79,7 @@ function Comparison() {
         });
       } else {
         alert(
-          'Data for one of the players could not be fetched. Please type carefully!'
+          "Data for one of the players could not be fetched. Please type carefully!"
         );
       }
     } catch (error) {
@@ -127,55 +127,55 @@ function Comparison() {
   ];
 
   return (
-    <div className='comparisonComponentContainer'>
+    <div className="comparisonComponentContainer">
       <div>
-        <form className='comparisonForm' onSubmit={handleSubmit}>
+        <form className="comparisonForm" onSubmit={handleSubmit}>
           <fieldset>
             <legend>Player Comparison of Season Averages (Per Game)</legend>
-            <section className='comparisonInputSection'>
+            <section className="comparisonInputSection">
               <div>
-                <label htmlFor='player1-input'>Player 1: </label>
+                <label htmlFor="player1-input">Player 1: </label>
                 <input
-                  id='player1-input'
-                  type='text'
-                  name='player1'
+                  id="player1-input"
+                  type="text"
+                  name="player1"
                   required
-                  placeholder='First Last'
-                />{' '}
+                  placeholder="First Last"
+                />{" "}
               </div>
-              <div className='bold'>vs.</div>
+              <div className="bold">vs.</div>
               <div>
-                <label htmlFor='player2-input'>Player 2: </label>{' '}
+                <label htmlFor="player2-input">Player 2: </label>{" "}
                 <input
-                  id='player2-input'
-                  type='text'
-                  name='player2'
+                  id="player2-input"
+                  type="text"
+                  name="player2"
                   required
-                  placeholder='First Last'
-                />{' '}
+                  placeholder="First Last"
+                />{" "}
               </div>
               <div>
-                <label htmlFor='seasonCompare'>Select a Season:</label>{' '}
-                <select name='seasonCompare' id='seasonCompare'>
-                  <option value='2023'>2022-2023</option>
+                <label htmlFor="seasonCompare">Select a Season:</label>{" "}
+                <select name="seasonCompare" id="seasonCompare">
+                  <option value="2023">2022-2023</option>
                 </select>
               </div>
               <div>
-                <input value='Compare' type='submit' />
+                <input value="Compare" type="submit" />
               </div>
             </section>
-            <p className='playerExamples'>
+            <p className="playerExamples">
               Examples: James Harden, Chris Paul, Kevin Durant, Steven Adams,
               Jeff Green, Kevin Love, LeBron James
             </p>
           </fieldset>
         </form>
       </div>
-      <div className='comparisonChartsSectionContainer'>
-        {' '}
-        <ComparisonChart statData={pointsData} statCategory='Points' />{' '}
-        <ComparisonChart statData={assistsData} statCategory='Assists' />{' '}
-        <ComparisonChart statData={reboundsData} statCategory='Rebounds' />
+      <div className="comparisonChartsSectionContainer">
+        {" "}
+        <ComparisonChart statData={pointsData} statCategory="Points" />{" "}
+        <ComparisonChart statData={assistsData} statCategory="Assists" />{" "}
+        <ComparisonChart statData={reboundsData} statCategory="Rebounds" />
       </div>
     </div>
   );
@@ -183,18 +183,18 @@ function Comparison() {
 
 const defaultStatData = {
   player1: {
-    playerName: 'Jaylen Brown',
-    playerNameForAPI: 'Jaylen_Brown',
-    points: '26.6',
-    rebounds: '6.9',
-    assists: '3.5',
+    playerName: "Jaylen Brown",
+    playerNameForAPI: "Jaylen_Brown",
+    points: "26.6",
+    rebounds: "6.9",
+    assists: "3.5",
   },
   player2: {
-    playerName: 'Steven Adams',
-    playerNameForAPI: 'Steven_Adams',
-    points: '8.6',
-    rebounds: '11.5',
-    assists: '2.3',
+    playerName: "Steven Adams",
+    playerNameForAPI: "Steven_Adams",
+    points: "8.6",
+    rebounds: "11.5",
+    assists: "2.3",
   },
 };
 

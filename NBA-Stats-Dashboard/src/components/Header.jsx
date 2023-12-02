@@ -1,9 +1,9 @@
-import '../styles/Header.css';
+import "../styles/Header.css";
 
 function Header() {
   return (
-    <div className='majorSection header'>
-      <h1 className='NBA'>NBA-Stats</h1>
+    <div className="majorSection header">
+      <h1 className="NBA">NBA-Stats</h1>
     </div>
   );
 }

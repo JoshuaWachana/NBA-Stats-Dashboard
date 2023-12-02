@@ -1,11 +1,11 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import NavMenu from './components/NavMenu';
-import MainContent from './components/MainContent';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import NavMenu from "./components/NavMenu";
+import MainContent from "./components/MainContent";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <NavMenu />
       <MainContent />

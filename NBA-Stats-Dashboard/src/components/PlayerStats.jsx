@@ -1,53 +1,53 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import axios from "axios";
 import {
   TopScorersUrl,
   TopAssistsUrl,
   TopReboundsUrl,
-} from '../utils/apiEndpoints';
-import { Chart } from 'react-google-charts';
-import Dropdown from './Dropdown';
-import AveragePoints from '../data/average-points.json';
-import AverageRebounds from '../data/average-rebounds.json';
-import AverageAssists from '../data/average-assists.json';
-import '../styles/PlayerStats.css';
+} from "../utils/apiEndpoints";
+import { Chart } from "react-google-charts";
+import Dropdown from "./Dropdown";
+import AveragePoints from "../data/average-points.json";
+import AverageRebounds from "../data/average-rebounds.json";
+import AverageAssists from "../data/average-assists.json";
+import "../styles/PlayerStats.css";
 
 const options = [
   {
-    title: 'Total Points',
+    title: "Total Points",
     url: TopScorersUrl,
-    dataApiKey: 'PTS',
-    nameApiKey: 'player_name',
+    dataApiKey: "PTS",
+    nameApiKey: "player_name",
   },
   {
-    title: 'Total Assists',
+    title: "Total Assists",
     url: TopAssistsUrl,
-    dataApiKey: 'field_goals',
-    nameApiKey: 'player_name',
+    dataApiKey: "field_goals",
+    nameApiKey: "player_name",
   },
   {
-    title: 'Total Rebounds',
+    title: "Total Rebounds",
     url: TopReboundsUrl,
-    dataApiKey: 'field_goals',
-    nameApiKey: 'player_name',
+    dataApiKey: "field_goals",
+    nameApiKey: "player_name",
   },
   {
-    title: 'Average Points',
+    title: "Average Points",
     data: AveragePoints,
-    dataApiKey: 'averagePerGame',
-    nameApiKey: 'playerName',
+    dataApiKey: "averagePerGame",
+    nameApiKey: "playerName",
   },
   {
-    title: 'Average Rebounds',
+    title: "Average Rebounds",
     data: AverageRebounds,
-    dataApiKey: 'averagePerGame',
-    nameApiKey: 'playerName',
+    dataApiKey: "averagePerGame",
+    nameApiKey: "playerName",
   },
   {
-    title: 'Average Assists',
+    title: "Average Assists",
     data: AverageAssists,
-    dataApiKey: 'averagePerGame',
-    nameApiKey: 'playerName',
+    dataApiKey: "averagePerGame",
+    nameApiKey: "playerName",
   },
 ];
 
@@ -71,7 +71,7 @@ const PlayerStats = () => {
   const graphData = getGraphData();
 
   const newChartData = [
-    ['Player', criteria.title],
+    ["Player", criteria.title],
     [labels[0], Number(graphData[0])],
     [labels[1], Number(graphData[1])],
     [labels[2], Number(graphData[2])],
@@ -80,7 +80,7 @@ const PlayerStats = () => {
   ];
 
   const newOptions = {
-    chartArea: { width: '50%' },
+    chartArea: { width: "50%" },
   };
 
   useEffect(() => {
@@ -101,22 +101,22 @@ const PlayerStats = () => {
   }, [criteria]);
 
   return (
-    <div className='playerStats'>
-      <div className='dropDownMenuContainer'>
-        <h1 className='playerStats__title'>League Leaders</h1>
+    <div className="playerStats">
+      <div className="dropDownMenuContainer">
+        <h1 className="playerStats__title">League Leaders</h1>
         <div>
           <Dropdown
             options={options}
             onSelect={(event) => {
               setCriteria(event);
             }}
-          />{' '}
+          />{" "}
         </div>
       </div>
-      <div className='playerStatsChartContainer'>
+      <div className="playerStatsChartContainer">
         <Chart
-          chartType='BarChart'
-          height='150px'
+          chartType="BarChart"
+          height="150px"
           data={newChartData}
           options={newOptions}
         />

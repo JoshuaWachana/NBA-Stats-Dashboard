@@ -1,14 +1,14 @@
-import { Chart } from 'react-google-charts';
-import PropTypes from 'prop-types';
+import { Chart } from "react-google-charts";
+import PropTypes from "prop-types";
 
 function ComparisonChart({ statData, statCategory }) {
-  const data = [['Player', `${statCategory}`, { role: 'style' }], ...statData];
+  const data = [["Player", `${statCategory}`, { role: "style" }], ...statData];
   return (
-    <div className='comparisonChartContainer'>
+    <div className="comparisonChartContainer">
       <div>
-        <h1 className='comparisonChartCategory'>{statCategory}</h1>
+        <h1 className="comparisonChartCategory">{statCategory}</h1>
       </div>
-      <Chart chartType='ColumnChart' width='200px' data={data} />
+      <Chart chartType="ColumnChart" width="200px" data={data} />
     </div>
   );
 }
