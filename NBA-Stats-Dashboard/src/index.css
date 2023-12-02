@@ -30,9 +30,9 @@ html {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1.5fr 8fr 0.5fr;
   grid-template-areas:
-    'header header'
-    'navMenu mainContent'
-    'navMenu footer';
+    "header header"
+    "navMenu mainContent"
+    "navMenu footer";
 }
 
 .majorSection {
@@ -42,43 +42,18 @@ html {
   padding: 10px;
 }
 
+.navMenu {
+  background-color: var(--blue);
+  grid-area: navMenu;
+  padding: 20px 10px;
+}
+
 .header {
   grid-area: header;
 }
 
 .mainContent {
   grid-area: mainContent;
-}
-
-.navMenu {
-  grid-area: navMenu;
-  padding: 20px 10px;
-  background-color: var(--blue);
-}
-
-.navItem {
-  margin: 20px;
-  list-style-type: none;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--white);
-}
-.navItem__text {
-  padding: 0 10px;
-}
-.navItem__text:hover {
-  background-color: var(--white);
-  color: var(--blue);
-}
-
-.navItem__icon {
-  margin-right: 12px;
-}
-
-.navItem__icon-arrow {
-  margin-left: auto;
 }
 
 .footer {
@@ -99,9 +74,9 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
-      'header'
-      'navMenu'
-      'mainContent'
-      'footer';
+      "header"
+      "navMenu"
+      "mainContent"
+      "footer";
   }
 }

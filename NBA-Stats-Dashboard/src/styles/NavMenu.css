@@ -1,0 +1,24 @@
+.navItem {
+  margin: 20px;
+  list-style-type: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+}
+.navItem__text {
+  padding: 0 10px;
+}
+.navItem__text:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.navItem__icon {
+  margin-right: 12px;
+}
+
+.navItem__icon-arrow {
+  margin-left: auto;
+}
