@@ -134,7 +134,7 @@ function Comparison() {
             <legend>Player Comparison of Season Averages (Per Game)</legend>
             <section className='comparisonInputSection'>
               <div>
-                <label htmlFor='player1-inpt'>Player 1: </label>
+                <label htmlFor='player1-input'>Player 1: </label>
                 <input
                   id='player1-input'
                   type='text'
